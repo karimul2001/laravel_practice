@@ -29,8 +29,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::resource('category', CategoryController::class);
-    Route::resource('product', ProductController::class);
+    
 });
 
 //admin login logout
@@ -49,6 +48,9 @@ Route::middleware('auth:admin')->prefix('admin')->group(function () {
     Route::post('logout', [App\Http\Controllers\Auth\Admin\LoginController::class, 'destroy'])->name('admin.logout');
 
     Route::view('/dashboard', 'backend.admin_dashboard');
+
+    Route::resource('category', CategoryController::class);
+    Route::resource('product', ProductController::class);
 });
 
 //manager login logout

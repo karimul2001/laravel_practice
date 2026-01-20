@@ -9,13 +9,13 @@
         <meta content="" name="Mannatthemes" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="assets/images/favicon.ico" />
+        <link rel="shortcut icon" href="{{url('')}}/assets/images/favicon.ico" />
         
         <!-- Css -->
         <!-- Main Css -->
-        <link rel="stylesheet" href="assets/libs/icofont/icofont.min.css">
-        <link href="assets/libs/flatpickr/flatpickr.min.css" type="text/css" rel="stylesheet">
-        <link rel="stylesheet" href="assets/css/tailwind.min.css">
+        <link rel="stylesheet" href="{{url('')}}/assets/libs/icofont/icofont.min.css">
+        <link href="{{url('')}}/assets/libs/flatpickr/flatpickr.min.css" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" href="{{url('')}}/assets/css/tailwind.min.css">
 
 @endsection
 
@@ -29,7 +29,7 @@
                                         <div class="items-center ">
                                             <h1 class="font-medium text-3xl block dark:text-slate-100">Product List</h1>
                                             <ol class="list-reset flex text-sm">
-                                                <li><a href="#" class="text-gray-500 dark:text-slate-400">Robotech</a></li>
+                                                <li><a href="{{url('')}}/#" class="text-gray-500 dark:text-slate-400">Robotech</a></li>
                                                 <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
                                                 <li class="text-gray-500 dark:text-slate-400">Dashboard</li>
                                                 <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
@@ -62,7 +62,7 @@
 @endif
                                             <div class="flex justify-end mb-4">
                                               <button class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 py-2 rounded">
-                                                <a href="{{route('product.create')}}">Add Porduct</a>
+                                                <a href="{{url('')}}/{{route('product.create')}}">Add Porduct</a>
                                                    
                                               </button>
                                             </div>
@@ -136,14 +136,14 @@
                                                         {{$item->category_id}}
                                                     </td>
                                                     <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-                                                        <a href=""
+                                                        <a href="{{url('')}}/"
                                                        class="px-3 py-1.5 bg-blue-600 text-white text-xs rounded hover:bg-blue-700 transition">
                                                         Edit </a>
 
                                                         <form action="{{ route('product.destroy', $item->id) }}" method="POST" class="inline">
     @csrf
     @method('DELETE')
-    <a href="#"
+    <a href="{{url('')}}/#"
        onclick="this.closest('form').submit()"
        class="inline-block bg-red-600 text-red px-3 py-1.5 text-xs rounded hover:bg-red-700 transition">
        Delete
@@ -168,14 +168,14 @@
 
         <!-- JAVASCRIPTS -->
         <!-- <div class="menu-overlay"></div> -->
-        <script src="assets/libs/lucide/umd/lucide.min.js"></script>
-        <script src="assets/libs/simplebar/simplebar.min.js"></script>
-        <script src="assets/libs/flatpickr/flatpickr.min.js"></script>
-        <script src="assets/libs/@frostui/tailwindcss/frostui.js"></script>
+        <script src="{{url('')}}/assets/libs/lucide/umd/lucide.min.js"></script>
+        <script src="{{url('')}}/assets/libs/simplebar/simplebar.min.js"></script>
+        <script src="{{url('')}}/assets/libs/flatpickr/flatpickr.min.js"></script>
+        <script src="{{url('')}}/assets/libs/@frostui/tailwindcss/frostui.js"></script>
 
-        <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
-        <script src="assets/js/pages/analytics-index.init.js"></script>
-        <script src="assets/js/app.js"></script>
+        <script src="{{url('')}}/assets/libs/apexcharts/apexcharts.min.js"></script>
+        <script src="{{url('')}}/assets/js/pages/analytics-index.init.js"></script>
+        <script src="{{url('')}}/assets/js/app.js"></script>
         <!-- JAVASCRIPTS -->
 
 @endsection
